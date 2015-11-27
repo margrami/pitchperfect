@@ -11,23 +11,22 @@ import AVFoundation
 
 
 
-var audioPlayer : AVAudioPlayer! // var audioPlayer declared here
-let filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType:"mp3")!
-let url = NSURL(fileURLWithPath: filePath)
+//var audioPlayer : AVAudioPlayer! // var audioPlayer declared here
+//let filePath = NSBundle.mainBundle().pathForResource("my_audio", ofType:".wav")!
+//let url = NSURL(fileURLWithPath: filePath)
+
 
 
 
 class PlaySoundsViewController: UIViewController {
-
-
+    
+    var audioPlayer : AVAudioPlayer!
+    var receivedAudio: RecordedAudio!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-            audioPlayer = try!
-                AVAudioPlayer(contentsOfURL: url)  // the variable audioPlayer is initiallized
-                audioPlayer.enableRate = true      // audioPlayer initiallized
-        
+        audioPlayer = try! AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
+        audioPlayer.enableRate = true
         
     }
 
