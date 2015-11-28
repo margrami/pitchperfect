@@ -45,12 +45,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        
-        //let currentDateTime = NSDate()
-        //let formatter = NSDateFormatter()
-        //formatter.dateFormat = "ddMMyyyy-HHmmss"
-        //let recordingName = formatter.stringFromDate(currentDateTime)+".wav"
-        
         let recordingName = "my_audio.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
@@ -85,13 +79,23 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
 }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "stopRecording"){
-            let controller = segue.destinationViewController as! PlaySoundsViewController
-            controller.receivedAudio  = sender as! RecordedAudio
+    //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+      //  if (segue.identifier == "stopRecording"){
+        //    let controller = segue.destinationViewController as! PlaySoundsViewController
+          //  controller.receivedAudio  = sender as! RecordedAudio
             
-        }
+        //}
+    //}
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     if (segue.identifier == "stopRecording"){
+       let data = segue.destinationViewController as! PlaySoundsViewController
+       data.receivedAudio  = sender as! RecordedAudio
+    
+      }
     }
+    
+    
     
     @IBAction func stopRecordAudio(sender: UIButton) {
         

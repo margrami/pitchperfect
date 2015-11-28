@@ -35,21 +35,41 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsq-0C-oWq">
-                                <rect key="frame" x="272" y="441" width="56" height="50"/>
+                                <rect key="frame" x="272" y="478" width="56" height="50"/>
                                 <animations/>
                                 <state key="normal" title="Button" image="stop2"/>
                                 <connections>
                                     <action selector="soundStop:" destination="Aae-7y-2fj" eventType="touchUpInside" id="fQg-K5-0er"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNX-rh-Ctl">
+                                <rect key="frame" x="52" y="315" width="170" height="100"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="chipmunk"/>
+                                <connections>
+                                    <action selector="playChippmunkAudio:" destination="Aae-7y-2fj" eventType="touchUpInside" id="vTb-7n-ic3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdA-x8-q1D">
+                                <rect key="frame" x="416" y="315" width="154" height="100"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="darthvader"/>
+                                <connections>
+                                    <action selector="DarthVaderAudio:" destination="Aae-7y-2fj" eventType="touchUpInside" id="cfc-8q-Ed6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BNX-rh-Ctl" firstAttribute="leading" secondItem="qr8-7i-0Ks" secondAttribute="leadingMargin" constant="32" id="414-dm-cJr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qgi-r0-hof" secondAttribute="trailing" constant="10" id="6UP-Jo-0ZU"/>
                             <constraint firstItem="bsq-0C-oWq" firstAttribute="centerX" secondItem="qr8-7i-0Ks" secondAttribute="centerX" id="Muk-LF-HD1"/>
                             <constraint firstItem="qgi-r0-hof" firstAttribute="top" secondItem="3Kb-xI-bMM" secondAttribute="bottom" constant="46" id="SQe-cH-XIS"/>
+                            <constraint firstItem="noN-da-aF6" firstAttribute="top" secondItem="BNX-rh-Ctl" secondAttribute="bottom" constant="181" id="c0U-d8-2m8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OdA-x8-q1D" secondAttribute="trailing" constant="10" id="fgP-nN-bBw"/>
                             <constraint firstItem="noN-da-aF6" firstAttribute="top" secondItem="bsq-0C-oWq" secondAttribute="bottom" constant="105" id="g4p-hI-6OG"/>
+                            <constraint firstItem="noN-da-aF6" firstAttribute="top" secondItem="OdA-x8-q1D" secondAttribute="bottom" constant="185" id="iPM-lg-k0Z"/>
                             <constraint firstItem="D6z-zX-fEP" firstAttribute="leading" secondItem="qr8-7i-0Ks" secondAttribute="leadingMargin" constant="20" id="lv0-Fw-IeA"/>
                         </constraints>
                     </view>
@@ -143,6 +163,8 @@
     <resources>
         <image name="Microphone" width="100" height="100"/>
         <image name="Stop" width="50" height="50"/>
+        <image name="chipmunk" width="100" height="100"/>
+        <image name="darthvader" width="100" height="100"/>
         <image name="fast" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>
         <image name="stop2" width="50" height="50"/>
